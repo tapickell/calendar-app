@@ -1,12 +1,3 @@
-<html style="height:100%">
-<head>
-  <title>Google Calendar</title>
-  <link rel="stylesheet" href="./bootstrap.css">
-  <script src="./jquery-1.11.2.js"></script>
-  <script src="./bootstrap.js"></script>
-
-  <script>
-
     const {remote, shell, ipcRenderer} = require('electron');
     const fs = require('fs');
     var app = remote.app;
@@ -92,24 +83,4 @@
       });
 
     }
-  </script>
 
-</head>
-<body style="height:100%; margin:0; padding: 0;">
-
-  <div id="reminders-pane" style="position:fixed;margin:150px 25% 0 25%;width:50%">
-  </div>
-
-
-  <webview
-      disablewebsecurity
-      nodeintegration
-      plugins
-      id="gcalendar-web-view"
-      src="https://calendar.google.com/calendar/"
-      preload="./spellchecker.js"
-      style="height:100%; margin:0; padding: 0;">
-  </webview>
-
-</body>
-</html>

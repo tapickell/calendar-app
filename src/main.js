@@ -18,7 +18,7 @@ function createGCalendarWindow(url) {
     width: 1200,
     height: 800,
     title: 'Google Calendar',
-    icon: __dirname+'/calendar.png',
+    icon: __dirname+'/images/calendar.png',
     "skip-taskbar": process.platform !== 'darwin'
   });
 
@@ -26,6 +26,7 @@ function createGCalendarWindow(url) {
 
   // window.loadUrl('https://calendar.google.com/');
   win.loadURL('file://'+__dirname+'/index.html');
+  // TODO - url that is passed in is same file ??
 
   // Emitted when the window is closed.
   win.on('closed', function() {
